@@ -28,7 +28,6 @@ class MainActivity : AppCompatActivity() {
         val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
     }
 
-
     // Right click on the res directory and select New > Android resource file
     // Select Navigation as the resource type and give it the file name navigation
 }
