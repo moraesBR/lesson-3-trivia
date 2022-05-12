@@ -22,14 +22,26 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
 import com.example.android.navigation.databinding.FragmentGameOverBinding
 
 class GameOverFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+                              savedInstanceState: Bundle?): View {
         // Inflate the layout for this fragment
         val binding: FragmentGameOverBinding = DataBindingUtil.inflate(
                 inflater, R.layout.fragment_game_over, container, false)
+
+        /* TODO (03) Add an action connecting the gameOverFragment to the gameFragment
+                Select PopTo TitleFragment in the editor with inclusive turned off */
+        with(binding){
+            tryAgainButton.setOnClickListener(
+                Navigation.createNavigateOnClickListener(
+                    R.id.action_gameOverFragment_to_titleFragment
+                )
+            )
+        }
+
         return binding.root
     }
 }

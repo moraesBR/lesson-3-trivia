@@ -27,6 +27,8 @@
         <action
             android:id="@+id/action_gameFragment_to_gameWonFragment"
             app:destination="@id/gameWonFragment"
+            app:popUpTo="@id/gameFragment"
+            app:popUpToInclusive="true"
             />
 
         <!-- TODO (02) Add popUpTo gameFragment with inclusive=true
@@ -35,24 +37,44 @@
         <action
             android:id="@+id/action_gameFragment_to_gameOverFragment"
             app:destination="@id/gameOverFragment"
+            app:popUpTo="@id/gameFragment"
+            app:popUpToInclusive="true"
             />
 
     </fragment>
 
-    <!-- TODO (04) Add an action connecting the gameWonFragment to the gameFragment
-             Select PopTo TitleFragment in the editor with inclusive turned off -->
     <fragment
         android:id="@+id/gameWonFragment"
         android:name="com.example.android.navigation.GameWonFragment"
         android:label="fragment_game_won"
-        tools:layout="@layout/fragment_game_won" />
+        tools:layout="@layout/fragment_game_won" >
 
-    <!-- TODO (03) Add an action connecting the gameOverFragment to the gameFragment
+        <!-- TODO (04) Add an action connecting the gameWonFragment to the gameFragment
              Select PopTo TitleFragment in the editor with inclusive turned off -->
+        <action
+            android:id="@+id/action_gameWonFragment_to_titleFragment"
+            app:destination="@id/titleFragment"
+            app:popUpTo="@id/titleFragment"
+            app:popUpToInclusive="false"
+            />
+
+    </fragment>
+
     <fragment
         android:id="@+id/gameOverFragment"
         android:name="com.example.android.navigation.GameOverFragment"
         android:label="fragment_game_over"
-        tools:layout="@layout/fragment_game_over" />
+        tools:layout="@layout/fragment_game_over" >
+
+        <!-- TODO (03) Add an action connecting the gameOverFragment to the gameFragment
+             Select PopTo TitleFragment in the editor with inclusive turned off -->
+        <action
+            android:id="@+id/action_gameOverFragment_to_titleFragment"
+            app:destination="@id/titleFragment"
+            app:popUpTo="@id/titleFragment"
+            app:popUpToInclusive="false"
+            />
+    </fragment>
+
 
 </navigation>
