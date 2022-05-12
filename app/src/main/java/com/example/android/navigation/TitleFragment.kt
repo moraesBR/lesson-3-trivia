@@ -23,7 +23,6 @@ class TitleFragment : Fragment() {
             false
         )
 
-        // TODO (09) Call binding.playButton.setOnClickListener and navigate to the gameFragment
         with(binding) {
             playButton.setOnClickListener(
                 Navigation.createNavigateOnClickListener(
