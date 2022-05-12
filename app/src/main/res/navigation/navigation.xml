@@ -21,21 +21,22 @@
         android:label="fragment_game"
         tools:layout="@layout/fragment_game" >
 
+        <!-- TODO (01) Add popUpTo gameFragment with inclusive=true
+             Go to the editor, select PopTo GameFragment in the attributes pane
+             with the inclusive flag checked. -->
         <action
             android:id="@+id/action_gameFragment_to_gameWonFragment"
             app:destination="@id/gameWonFragment"
             />
-        <!-- TODO (01) Add popUpTo gameFragment with inclusive=true
+
+        <!-- TODO (02) Add popUpTo gameFragment with inclusive=true
              Go to the editor, select PopTo GameFragment in the attributes pane
              with the inclusive flag checked. -->
-
         <action
             android:id="@+id/action_gameFragment_to_gameOverFragment"
             app:destination="@id/gameOverFragment"
             />
-        <!-- TODO (02) Add popUpTo gameFragment with inclusive=true
-             Go to the editor, select PopTo GameFragment in the attributes pane
-             with the inclusive flag checked. -->
+
     </fragment>
 
     <!-- TODO (04) Add an action connecting the gameWonFragment to the gameFragment
