@@ -32,6 +32,8 @@ class GameOverFragment : Fragment() {
         val binding: FragmentGameOverBinding = DataBindingUtil.inflate(
                 inflater, R.layout.fragment_game_over, container, false)
 
+        // TODO (09) Replace action ID with actionGameOverFragmentToGameFragment
+        // From GameOverFragmentDirections
         with(binding){
             tryAgainButton.setOnClickListener(
                 Navigation.createNavigateOnClickListener(

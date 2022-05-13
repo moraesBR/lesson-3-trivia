@@ -34,6 +34,8 @@ class GameWonFragment : Fragment() {
                 inflater, R.layout.fragment_game_won, container, false)
 
         with(binding){
+            // TODO (10) Replace action ID with actionGameWonFragmentToGameFragment
+            // From GameWonFragmentDirections
             nextMatchButton.setOnClickListener(
                 Navigation.createNavigateOnClickListener(
                     R.id.action_gameWonFragment_to_titleFragment
@@ -41,6 +43,8 @@ class GameWonFragment : Fragment() {
             )
         }
 
+        // TODO (08) Add and show toast to get the GameWonFragmentArgs from the arguments Bundle
+        // "NumCorrect: ${args.numCorrect}, NumQuestions: ${args.numQuestions}"
         return binding.root
     }
 }

@@ -24,6 +24,10 @@ class TitleFragment : Fragment() {
         )
 
         with(binding) {
+            // TODO (11) Replace action ID with actionTitleFragmentToGameFragment
+            // From TitleFragmentDirections
+            // We will have to switch this to using an anonymous function, since
+            // createNavigateOnClickListener cannot take NavDirections
             playButton.setOnClickListener(
                 Navigation.createNavigateOnClickListener(
                     R.id.action_titleFragment2_to_gameFragment
@@ -31,24 +35,16 @@ class TitleFragment : Fragment() {
             )
         }
 
-        // TODO (03) Call setHasOptionsMenu(true)
-        // This tells Android that our fragment has an Options Menu, so it will call
-        // onCreateOptionsMenu
         setHasOptionsMenu(true)
 
         return binding.root
     }
 
-    // TODO (04) Override onCreateOptionsMenu
-    // Use the passed-in MenuInflater to inflate the overflow_menu
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
         inflater.inflate(R.menu.overflow_menu,menu)
     }
 
-    // TODO (05) Override onOptionsItemSelected
-    // Return true if NavigationUI.onNavDestinationSelected returns true, else return
-    // super.onOptionsItemSelected.
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return NavigationUI.onNavDestinationSelected(
             item, requireView().findNavController()
