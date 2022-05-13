@@ -32,8 +32,6 @@ class GameOverFragment : Fragment() {
         val binding: FragmentGameOverBinding = DataBindingUtil.inflate(
                 inflater, R.layout.fragment_game_over, container, false)
 
-        /* TODO (03) Add an action connecting the gameOverFragment to the gameFragment
-                Select PopTo TitleFragment in the editor with inclusive turned off */
         with(binding){
             tryAgainButton.setOnClickListener(
                 Navigation.createNavigateOnClickListener(

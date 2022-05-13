@@ -33,8 +33,6 @@ class GameWonFragment : Fragment() {
         val binding: FragmentGameWonBinding = DataBindingUtil.inflate(
                 inflater, R.layout.fragment_game_won, container, false)
 
-        /* TODO (04) Add an action connecting the gameWonFragment to the gameFragment
-                Select PopTo TitleFragment in the editor with inclusive turned off */
         with(binding){
             nextMatchButton.setOnClickListener(
                 Navigation.createNavigateOnClickListener(
