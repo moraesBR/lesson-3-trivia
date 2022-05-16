@@ -24,13 +24,12 @@ class TitleFragment : Fragment() {
         )
 
         with(binding) {
-            // TODO (11) Replace action ID with actionTitleFragmentToGameFragment
-            // From TitleFragmentDirections
-            // We will have to switch this to using an anonymous function, since
-            // createNavigateOnClickListener cannot take NavDirections
+
             playButton.setOnClickListener(
                 Navigation.createNavigateOnClickListener(
-                    R.id.action_titleFragment2_to_gameFragment
+                    // TODO (11) Replace action ID with actionTitleFragmentToGameFragment
+                    // From TitleFragmentDirections
+                    TitleFragmentDirections.actionTitleFragmentToGameFragment()
                 )
             )
         }
