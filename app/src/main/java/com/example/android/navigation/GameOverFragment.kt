@@ -35,8 +35,6 @@ class GameOverFragment : Fragment() {
         with(binding){
             tryAgainButton.setOnClickListener(
                 Navigation.createNavigateOnClickListener(
-                    // TODO (09) Replace action ID with actionGameOverFragmentToGameFragment
-                    // From GameOverFragmentDirections
                     GameOverFragmentDirections.actionGameOverFragmentToTitleFragment()
                 )
             )

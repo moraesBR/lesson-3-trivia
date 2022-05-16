@@ -27,8 +27,6 @@ class TitleFragment : Fragment() {
 
             playButton.setOnClickListener(
                 Navigation.createNavigateOnClickListener(
-                    // TODO (11) Replace action ID with actionTitleFragmentToGameFragment
-                    // From TitleFragmentDirections
                     TitleFragmentDirections.actionTitleFragmentToGameFragment()
                 )
             )

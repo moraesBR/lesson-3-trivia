@@ -100,11 +100,6 @@ class GameFragment : Fragment() {
                         setQuestion()
                         binding.invalidateAll()
                     } else {
-                        // We've won!  Navigate to the gameWonFragment.
-                        // TODO (03) Replace the action ID for the game won state with GameFragmentDirections
-                        // GameFragmentDirections.actionGameFragmentToGameWonFragment
-                        // TODO (07) Add the newly-added parameters to the constructor for the Directions
-                        // numQuestions and questionIndex
                         view.findNavController().navigate(
                             GameFragmentDirections.actionGameFragmentToGameWonFragment(
                                 numQuestions,
@@ -113,9 +108,6 @@ class GameFragment : Fragment() {
                         )
                     }
                 } else {
-                    // Game over! A wrong answer sends us to the gameOverFragment.
-                    // TODO (04) Replace the action ID for the game over state with GameFragmentDirections
-                    // GameFragmentDirections.actionGameFragmentToGameOverFragment
                     view.findNavController().navigate(
                         GameFragmentDirections.actionGameFragmentToGameOverFragment()
                     )

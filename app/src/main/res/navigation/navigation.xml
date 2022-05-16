@@ -43,18 +43,10 @@
         android:label="fragment_game_won"
         tools:layout="@layout/fragment_game_won" >
 
-        <!-- TODO (05) Add the numQuestions argument from the nav editor
-             Select the gameWonFragment in the nav editor.  Click the little triangle next to
-             arguments to expand the argument section.  Add the numQuestions argument with
-             integer type -->
         <argument
             android:name="numQuestions"
             app:argType="integer" />
 
-        <!-- TODO (06) Add the numCorrect argument from the nav editor
-             Select the gameWonFragment in the nav editor.  Click the little triangle next to
-             arguments to expand the argument section.  Add the numCorrect argument with
-             integer type -->
         <argument
             android:name="numCorrect"
             app:argType="integer" />
