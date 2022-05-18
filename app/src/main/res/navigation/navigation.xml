@@ -73,6 +73,8 @@
             app:popUpToInclusive="false" />
     </fragment>
 
+    <!-- TODO (01) Add the RulesFragment to the navigation graph -->
+
     <fragment
         android:id="@+id/aboutFragment"
         android:name="com.example.android.navigation.AboutFragment"
