@@ -29,7 +29,6 @@ import com.example.android.navigation.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     private lateinit var navController: NavController
-    // TODO (05) Add private lateinit vars drawerLayout and appBarConfiguration
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var appBarConfiguration: AppBarConfiguration
 
@@ -42,24 +41,23 @@ class MainActivity : AppCompatActivity() {
         )
 
         with(this) {
-            // TODO (06) Initialize drawerLayout var from binding
             drawerLayout = binding.drawLayout
             navController = findNavController(R.id.myNavHostFragment)
 
-            // TODO (07) Add the DrawerLayout as the second parameter to setupActionBarWithNavController
             NavigationUI.setupActionBarWithNavController(
                 this,
                 navController,
                 drawerLayout
             )
 
-            // TODO (08) Create appBarConfiguration with the navController.graph and drawerLayout
             appBarConfiguration = AppBarConfiguration(
                 navController.graph,
                 drawerLayout
             )
 
-            // TODO (09) Hook the navigation UI up to the navigation view. (navView)
+            // TODO (01) call navController.addOnDestinationChangedListener with an anonymous function
+            // TODO (02) in the anonymous function unlock/lock the drawer layout if the id matches the start destination
+
             NavigationUI.setupWithNavController(
                 binding.navView,
                 navController
@@ -68,7 +66,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onSupportNavigateUp(): Boolean{
-        //  TODO (10) Replace navController.navigateUp with NavigationUI.navigateUp with drawerLayout param
         return NavigationUI.navigateUp(navController,appBarConfiguration)
     }
 }
