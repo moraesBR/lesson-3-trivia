@@ -14,6 +14,12 @@
             android:id="@+id/action_titleFragment_to_gameFragment"
             app:destination="@id/gameFragment" />
     </fragment>
+    <!-- TODO (03) Add the sliding animation to the titleFragment_to_gameFragment action
+             Go to the navigation editor and select slide_in_left for Enter and Pop Enter
+             and slide_in_right for the Exit and Pop Exit animations -->
+    <!-- TODO (02) Create slide_in_left animation in new file
+         Do this by right clicking on the anim folder with
+         New->Animation resource file -->
 
     <fragment
         android:id="@+id/gameFragment"
@@ -27,6 +33,12 @@
             app:popUpTo="@id/gameFragment"
             app:popUpToInclusive="true"
             />
+        <!-- TODO (01) Create fade_in animation in new file
+             Do this by right clicking on the anim folder with
+             New->Animation resource file -->
+        <!-- TODO (07) Add the fade in/out animation to the gameFragment to gameOverFragment action
+            Go to the navigation editor and select fade_in for Enter and Pop Enter
+            and fade_out for the Exit and Pop Exit animations -->
 
         <action
             android:id="@+id/action_gameFragment_to_gameOverFragment"
@@ -34,7 +46,9 @@
             app:popUpTo="@id/gameFragment"
             app:popUpToInclusive="true"
             />
-
+        <!-- TODO (04) Add the sliding animation to the gameFragment to gameWonFragment action
+             Go to the navigation editor and select slide_in_left for Enter and Pop Enter
+             and slide_in_right for the Exit and Pop Exit animations -->
     </fragment>
 
     <fragment
@@ -43,14 +57,6 @@
         android:label="fragment_game_won"
         tools:layout="@layout/fragment_game_won" >
 
-        <argument
-            android:name="numQuestions"
-            app:argType="integer" />
-
-        <argument
-            android:name="numCorrect"
-            app:argType="integer" />
-
         <action
             android:id="@+id/action_gameWonFragment_to_titleFragment"
             app:destination="@id/titleFragment"
@@ -58,6 +64,16 @@
             app:popUpToInclusive="false"
             />
 
+        <argument
+            android:name="numQuestions"
+            app:argType="integer" />
+
+        <argument
+            android:name="numCorrect"
+            app:argType="integer" />
+        <!-- TODO (05) Add the sliding animation to the gameWonFragment to gameFragment action
+             Go to the navigation editor and select slide_in_left for Enter and Pop Enter
+             and slide_in_right for the Exit and Pop Exit animations -->
     </fragment>
 
     <fragment
@@ -71,6 +87,9 @@
             app:destination="@id/titleFragment"
             app:popUpTo="@id/titleFragment"
             app:popUpToInclusive="false" />
+        <!-- TODO (06) Add the sliding animation to the gameOverFragment to gameFragment action
+             Go to the navigation editor and select slide_in_left for Enter and Pop Enter
+             and slide_in_right for the Exit and Pop Exit animations -->
     </fragment>
 
     <fragment

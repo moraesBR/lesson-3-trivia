@@ -56,8 +56,6 @@ class MainActivity : AppCompatActivity() {
                 drawerLayout
             )
 
-            // TODO (01) call navController.addOnDestinationChangedListener with an anonymous function
-            // TODO (02) in the anonymous function unlock/lock the drawer layout if the id matches the start destination
             navController.addOnDestinationChangedListener {
                     nc: NavController, nd: NavDestination, args: Bundle? ->
                 if (nd.id == nc.graph.startDestinationId){
