@@ -21,6 +21,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
+import androidx.navigation.NavDestination
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
@@ -57,6 +58,15 @@ class MainActivity : AppCompatActivity() {
 
             // TODO (01) call navController.addOnDestinationChangedListener with an anonymous function
             // TODO (02) in the anonymous function unlock/lock the drawer layout if the id matches the start destination
+            navController.addOnDestinationChangedListener {
+                    nc: NavController, nd: NavDestination, args: Bundle? ->
+                if (nd.id == nc.graph.startDestinationId){
+                    drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED)
+                }
+                else {
+                    drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED)
+                }
+            }
 
             NavigationUI.setupWithNavController(
                 binding.navView,
