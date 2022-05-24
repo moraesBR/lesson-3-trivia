@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- TODO (01) Create fade_in animation in new file
+             Do this by right clicking on the anim folder with
+             New->Animation resource file -->
+    <alpha
+        android:duration="@android:integer/config_mediumAnimTime"
+        android:fromAlpha="0.0"
+        android:toAlpha="1.0"
+        />
+</set>

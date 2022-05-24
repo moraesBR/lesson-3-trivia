@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity() {
             )
 
             navController.addOnDestinationChangedListener {
-                    nc: NavController, nd: NavDestination, args: Bundle? ->
+                    nc: NavController, nd: NavDestination, _: Bundle? ->
                 if (nd.id == nc.graph.startDestinationId){
                     drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED)
                 }
